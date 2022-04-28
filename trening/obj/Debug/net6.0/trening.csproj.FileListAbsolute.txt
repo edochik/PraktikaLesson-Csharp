@@ -1,0 +1,15 @@
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\bin\Debug\net6.0\trening.exe
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\bin\Debug\net6.0\trening.deps.json
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\bin\Debug\net6.0\trening.runtimeconfig.json
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\bin\Debug\net6.0\trening.dll
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\bin\Debug\net6.0\trening.pdb
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.csproj.AssemblyReference.cache
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.AssemblyInfoInputs.cache
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.AssemblyInfo.cs
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.csproj.CoreCompileInputs.cache
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.dll
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\refint\trening.dll
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.pdb
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\trening.genruntimeconfig.cache
+C:\Users\edoch\Desktop\GeekBrains\IT-специалист\1 четверть\Знакомство с языками программирования (Семинар)\PraktikaLesson4\trening\obj\Debug\net6.0\ref\trening.dll
