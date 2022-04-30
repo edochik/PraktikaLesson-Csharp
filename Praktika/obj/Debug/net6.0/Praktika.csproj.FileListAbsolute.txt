@@ -1,0 +1,15 @@
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\bin\Debug\net6.0\Praktika.exe
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\bin\Debug\net6.0\Praktika.deps.json
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\bin\Debug\net6.0\Praktika.runtimeconfig.json
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\bin\Debug\net6.0\Praktika.dll
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\bin\Debug\net6.0\Praktika.pdb
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.csproj.AssemblyReference.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.AssemblyInfoInputs.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.AssemblyInfo.cs
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.csproj.CoreCompileInputs.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.dll
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\refint\Praktika.dll
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.pdb
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\Praktika.genruntimeconfig.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Praktika\obj\Debug\net6.0\ref\Praktika.dll

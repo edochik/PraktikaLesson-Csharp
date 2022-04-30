@@ -1,6 +1,7 @@
-﻿//Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
-/*
-int[] array = { 203, 511, 516, 612 };
+﻿
+// 1. Задача. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+
 
 void PrintNew(int[] array)
 {
@@ -18,7 +19,7 @@ int[] createArray(int elements)
     int i = 0;
     while (i < arr.Length)
     {
-        arr[i] = new Random().Next(100, 1000);
+        arr[i] = new Random().Next(1000, 10000);
         i++;
     }
     return arr;
@@ -36,9 +37,9 @@ int EvenNum(int[] array)
 }
 
 int [] test = createArray(10);
+
+
 PrintNew(test);
 Console.WriteLine();
+
 Console.WriteLine(EvenNum(test));
-*/
-
-
