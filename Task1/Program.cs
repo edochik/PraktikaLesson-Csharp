@@ -1,5 +1,6 @@
 ﻿//1.	Задать массив из 8 элементов и вывести их на экра
 
+
 int[] array(int elements)
 {
     int[] array = new int[elements];

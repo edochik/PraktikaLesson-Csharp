@@ -7,24 +7,28 @@
 //3. Метод по поиску положительных элементов. https://www.youtube.com/watch?v=0nr8wRRMeTw - без метода
 //4. Метод по поиску отрицательных элементов. 
 // в метод пытался вставить второе значение
-int[] arr = new int[12];
-
-void PrintArray(int[] array)
+int[] array(int elements)
 {
-    int lenght = array.Length;
-    for (int i = 0; i < lenght; i++)
+    int[] arr = new int[elements];
+    for (int i = 0; i < arr.Length; i++)
     {
-        array[i] = new Random().Next(-9, 9);
-        Console.Write($" {array[i]}");
+        arr[i] = new Random().Next(-9, 9);
     }
-
+    return arr;
 }
 
-int FindPositived(int[] array)
+void Print(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int FindPositive(int[] array)
 {
     int result = 0;
-    int lenght = array.Length;
-    for (int i = 0; i < lenght; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         if (array[i] > 0)
         {
@@ -36,37 +40,20 @@ int FindPositived(int[] array)
 
 int FindNegative(int[] array)
 {
-    int result = 0;
-    int lenght = array.Length;
-    for (int i = 0; i < lenght; i++)
+    int resutl = 0;
+    for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] < 0)
-        {
-            result +=array[i];
-        }
+        if(array[i]<0) resutl += array[i];
     }
-    return result;
+    return resutl;
 }
-PrintArray(arr);
-Console.WriteLine();
-Console.Write(FindPositived(arr));
-Console.WriteLine();
-Console.Write(FindNegative(arr));
-
-
-/*
-int[] myArray = { 0, 1, 2, 3, 6, 5 };
-
-int result = 0;
-
-for (int i = 0; i < myArray.Length; i++) // код для сложения/разности массива
+void PrintSimple(int element)
 {
-    if (myArray[i] % 2 == 0)
-    {
-        result += myArray[i];
-    }
+    Console.Write($"{element}");
 }
-*/
-//Console.WriteLine(result);
-//Console.WriteLine(FindPositived(myArray));
-
+int[] someArr = array(12);
+Print(someArr);
+Console.WriteLine();
+PrintSimple(FindPositive(someArr));
+Console.WriteLine();
+PrintSimple(FindNegative(someArr));

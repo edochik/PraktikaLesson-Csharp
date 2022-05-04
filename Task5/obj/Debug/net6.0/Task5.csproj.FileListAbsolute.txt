@@ -1,0 +1,15 @@
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.csproj.AssemblyReference.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.AssemblyInfoInputs.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.AssemblyInfo.cs
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.csproj.CoreCompileInputs.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\bin\Debug\net6.0\Task5.exe
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\bin\Debug\net6.0\Task5.deps.json
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\bin\Debug\net6.0\Task5.runtimeconfig.json
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\bin\Debug\net6.0\Task5.dll
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\bin\Debug\net6.0\Task5.pdb
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.dll
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\refint\Task5.dll
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.pdb
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\Task5.genruntimeconfig.cache
+C:\Users\Егор\Desktop\GeekBrains\1 четверть\Знакомство с языками программирования (семинары)\PraktikaLesson-Csharp\Task5\obj\Debug\net6.0\ref\Task5.dll

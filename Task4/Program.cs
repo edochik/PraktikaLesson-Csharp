@@ -1,35 +1,35 @@
 ﻿//4.	Написать программу замену элементов массива на противоположные 
 
-void PrintNew(int[] array)
+int[] NewArray(int nums)
 {
-    int lenght = array.Length;
-    for (int i = 0; i < lenght; i++)
+    int[] arr = new int[nums];
+    for (int i = 0; i < arr.Length; i++)
     {
-        array[i] = new Random().Next(99, 1000);
+        arr[i] = new Random().Next(0, 9);
+    }
+    return arr;
+}
+
+void PrintArr(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
         Console.Write($" {array[i]}");
     }
 }
 
-void PrinNegative(int[] array) // 4. Написать программу замену элементов массива на противоположные
+void NegativArray(int[] array)
 {
-    int lenght = array.Length;
-    for (int i = 0; i < lenght; i++)
+    int result = 0; 
+    for (int i = 0; i < array.Length; i++)
     {
-        array[i] = -1 * array[i];
-        Console.Write(array[i]);
+        result = array[i] * (-1);
+        Console.Write(result);
     }
 }
 
-int[] array = new int[8];
 
-PrintNew(array);
+int[] newArray = NewArray(8);
+PrintArr(newArray);
 Console.WriteLine();
-PrinNegative(array);
-/*
-PrintNew(array);
-
-int a = 1;
-
-int b = a * (-1);
-Console.WriteLine(a + " " + b);*/
-
+NegativArray(newArray);
