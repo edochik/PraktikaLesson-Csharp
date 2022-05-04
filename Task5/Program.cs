@@ -18,20 +18,25 @@ void PrintArray(int[] newPrint)
     }
 }
 
-int findElemArr(int[] array,int find)
+int findElemArr(int[] array, int find)
 {
+    
+    int count = array.Length;
+    int index = 0;
     int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    while (index < count)
     {
-        if (array[i] == find) result = i;
-        break;
+        if (array[index] == find)
+        {
+            result = index;
+        }
+        index++;
     }
     return result;
-
 }
 int[] newArr = array(8);
 PrintArray(newArr);
 
 Console.WriteLine();
-int pos = findElemArr(newArr,3);
+int pos = findElemArr(newArr, 3);
 Console.Write(pos);
