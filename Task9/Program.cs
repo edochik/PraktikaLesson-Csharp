@@ -105,7 +105,7 @@ Console.WriteLine();
 newText = Replace (newText, 'к', 'К');
 Console.WriteLine(newText);
 */
-
+/*
 int[] arr = { 1, 3, 5, 4, 2, 7, 8 };
 
 void PrintArray(int[] array)
@@ -136,3 +136,45 @@ PrintArray(arr);
 SelectionSorrt(arr);
 
 PrintArray(arr);
+*/
+void SelectionSorrt(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        int minPosition = i;
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[minPosition]) minPosition = j;
+        }
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary;
+    }
+
+}
+
+
+int[] arrayNew(int elements)
+{
+    int[] array = new int[elements];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 9);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int[] newArr = arrayNew(8);
+PrintArray(newArr);
+
+SelectionSorrt(newArr);
+Console.WriteLine();
+PrintArray(newArr);
