@@ -76,8 +76,8 @@ for (int i = 2; i <= 10; i++)
     }
     Console.WriteLine();
 }
-
-
+*/
+/*
 string text = " - Я думаю, - сказал князь улыбаясь, - что "
             + "ежели бы вас послали вместо нашего милого Винцегероде,"
             + "вы бы взяли приступом согласие пруского короля."
@@ -87,22 +87,22 @@ string text = " - Я думаю, - сказал князь улыбаясь, - �
 //             012345
 // s [3]
 
+
 string Replace(string text, char OldValue, char NewValue)
 {
     string result = String.Empty;
-    int length = text.Length;
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < text.Length; i++)
     {
-        if (text[i] == OldValue) result += $"{NewValue}";
+        if (text [i]  == OldValue) result += $"{NewValue}";
         else result += $"{text[i]}";
     }
-    return result;
+    return result;  
 }
 
-string newText = Replace (text, ' ', '|');
+string newText = Replace(text, ' ', '|');
 Console.WriteLine(newText);
 Console.WriteLine();
-newText = Replace (newText, 'к', 'К');
+newText = Replace(newText, 'к', 'К');
 Console.WriteLine(newText);
 */
 /*
@@ -137,44 +137,3 @@ SelectionSorrt(arr);
 
 PrintArray(arr);
 */
-void Selection(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        int minPositon = i;
-        for (int j = i + 1; j < array.Length; j++)
-        {
-            if (array[j] < array[minPositon]) minPositon = j;
-
-        }
-        int temporary = array[i];
-        array[i] = array[minPositon];
-        array[minPositon] = temporary;
-
-    }
-
-}
-int[] arrayNew(int elements)
-{
-    int[] array = new int[elements];
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(0, 9);
-    }
-    return array;
-}
-
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($" {array[i]}");
-    }
-}
-
-int[] newArr = arrayNew(8);
-PrintArray(newArr);
-
-Selection(newArr);
-Console.WriteLine();
-PrintArray(newArr);
