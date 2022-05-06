@@ -137,23 +137,23 @@ SelectionSorrt(arr);
 
 PrintArray(arr);
 */
-void SelectionSorrt(int[] array)
+void Selection(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        int minPosition = i;
+        int minPositon = i;
         for (int j = i + 1; j < array.Length; j++)
         {
-            if (array[j] < array[minPosition]) minPosition = j;
+            if (array[j] < array[minPositon]) minPositon = j;
+
         }
         int temporary = array[i];
-        array[i] = array[minPosition];
-        array[minPosition] = temporary;
+        array[i] = array[minPositon];
+        array[minPositon] = temporary;
+
     }
 
 }
-
-
 int[] arrayNew(int elements)
 {
     int[] array = new int[elements];
@@ -175,6 +175,6 @@ void PrintArray(int[] array)
 int[] newArr = arrayNew(8);
 PrintArray(newArr);
 
-SelectionSorrt(newArr);
+Selection(newArr);
 Console.WriteLine();
 PrintArray(newArr);
