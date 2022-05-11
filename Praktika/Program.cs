@@ -1073,13 +1073,18 @@ void PrintArray(int[] array)
 
 int FindElem(int[] array, int find)
 {
-    int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    int length = array.Length;
+    int index = 0;
+    int position = 0;
+    while (index < length)
     {
-        if(array[i] == find) result += array[i];
-        break;
+        if (array[index] == find)
+        {
+            position = +index;
+        }
+        index++;
     }
-    return result;
+    return position;
 }
 
 void FindElemM(int[] array, int find)
@@ -1087,7 +1092,7 @@ void FindElemM(int[] array, int find)
     int result = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] == find) result += array[i];
+        if (array[i] == find) result += array[i];
         Console.Write($"{find} есть");
         break;
     }
@@ -1095,9 +1100,9 @@ void FindElemM(int[] array, int find)
 int[] num = newArray(8);
 PrintArray(num);
 Console.WriteLine();
-Console.Write(FindElem(num,3));
+Console.Write(FindElem(num, 3));
 Console.WriteLine();
-FindElemM(num,3);
+FindElemM(num, 3);
 
 */
 //=========================================6 Задача=====================================================
@@ -1512,8 +1517,60 @@ numFib(a);
 /*
 Написать программу масштабирования фигуры Тут для тех кто далеко улетел, чтобы задавались вершины фигуры списком 
 (одной строкой) например: "(0,0) (2,0) (2,2) (0,2)" коэффициент масштабирования k задавался отдельно - 2 или 4 
-или 0.5 В результате показать координаты, которые получатся. при k = 2 получаем "(0,0) (4,0) (4,4) (0,4)"*/
+или 0.5 В результате показать координаты, которые получатся = . при k2 получаем "(0,0) (4,0) (4,4) (0,4)"*/
+/*
+int xa = 5, ya = 22,
+     xb = 5, yb = 12,
+     xc = 100, yc = 22,
+     xd = 100, yd = 12;
+Console.Clear();
+Console.SetCursorPosition(xa, ya);
+Console.WriteLine("+");
+Console.SetCursorPosition(xb, yb);
+Console.WriteLine("+");
+Console.SetCursorPosition(xc, yc);
+Console.WriteLine("+");
+Console.SetCursorPosition(xd, yd);
+Console.WriteLine("+");
 
+int x = xa, y = yb;
+
+int count = 0;
+
+while (count < 10000)
+{
+    int what = new Random().Next(0, 4);
+    if (what == 0)
+    {
+        x = (x + xa) / 2;
+        y = (y + ya) / 2;
+    }
+    if (what == 1)
+    {
+        x = (x + xb) / 2;
+        y = (y + yb) / 2;
+    }
+    if (what == 2)
+    {
+        x = (x + xc) / 2;
+        y = (y + yc) / 2;
+    }
+    if (what == 3)
+    {
+        x = (x + xd) / 2;
+        y = (y + yd) / 2;
+    }
+    Console.SetCursorPosition(x, y);
+    Console.WriteLine("+");
+    count++;
+}
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
+*/
 //=========================================Задача 7 =====================================================
 //Написать программу копирования массива
 /*
@@ -1540,29 +1597,34 @@ int[] array = Array(7);
 
 int PrintArraya(int[] array)
 {
-    int[] newArray = new int[array.Length];
+    int[] newArray = new int[] { };
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = newArray[i];
+        array[i] += newArray[i];
     }
-    return newArray[5];
+    return newArray;
 }
 
 PrintArray(array);
 Console.WriteLine();
 Console.Write(PrintArraya(array));
+
+
 */
+
 //Подсчитать сумму цифр в числе
 
 //Определить количество цифр в числе
 
 //Определить сколько чисел больше 0 введено с клавиатуры
 
+//Определить, присутствует ли в заданном массиве, некоторое число
+
+//Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+
 /*
+Написать программу масштабирования фигуры Тут для тех кто далеко улетел, чтобы задавались вершины фигуры списком 
+(одной строкой) например: "(0,0) (2,0) (2,2) (0,2)" коэффициент масштабирования k задавался отдельно - 2 или 4 
+или 0.5 В результате показать координаты, которые получатся = . при k2 получаем "(0,0) (4,0) (4,4) (0,4)"
+*/
 
-
-
-Повтор:
-Определить, присутствует ли в заданном массиве, некоторое число
-Найти произведение пар чисел в одномерном массиве. 
-Парой считаем первый и последний элемент, второй и предпоследний и т.д.
