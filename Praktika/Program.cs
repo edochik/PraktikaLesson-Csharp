@@ -300,7 +300,20 @@ Method3(a,b,c);*/
 
 // ============================== 6 задача =================================
 // Написать программу вычисления значения функции y = f(a)
+/*
+int x = -3;
+int Method(int a)
+{
+    a = (a * a) - 5;
+    return a;
+}
+void PrintMethod(int a)
+{
+    Console.Write(a);
+}
 
+PrintMethod(Method(x));
+*/
 //================================= 7 задача ==============================
 // Выяснить является ли число чётным
 /*
@@ -450,7 +463,7 @@ void DeleteTwoNum(int numbr)
 DeleteTwoNum(b);
 */
 
-//==================================== 13 задача =============================
+//==================================== 14 задача =============================
 // Выяснить, кратно ли число заданному, если нет, вывести остаток
 /*
 int a = 5;
@@ -486,10 +499,23 @@ void Method(int arg1, int arg2)
 
 Method(a, b);
 */
-//==================================== 13 задача =========================================
+//==================================== 15 задача =========================================
 //Найти третью цифру числа или сообщить, что её нет
-//int i = 352;
-//НЕ РЕШИЛ%((((((((((()))))))))))
+/*
+int i = 155;
+int Method(int a)
+{
+    if (a > 100 && a < 1000) a = a % 10;
+    else a = -1;
+    return a;
+}
+
+void printMethod(int a )
+{
+    Console.Write(a);
+}
+printMethod(Method(i));
+*/
 
 //****************************Почувствуй себя джуном******************************
 //=====================================1 задача=============================================
@@ -534,7 +560,7 @@ void numWeek(int elements)
 numWeek(nuWe);
 */
 
-//=====================================2 задача=============================================
+//=====================================3 задача=============================================
 //По двум заданным числам проверять является ли одно квадратом другого
 /*
 int a = 31;
@@ -574,11 +600,20 @@ void Sqr(int num1, int num2)
 Sqr(a, b);
 */
 
-//=====================================3 задача=============================================
+//=====================================4 задача=============================================
 //Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
-//????????????????????????????????????????????????????????????????????????????????????????????
+//НЕ РЕШИЛ
+//V - Дизъюнкция (или)   ⋀ - Конъюнкция (и)
+/*
+int x = 1;
+int y = 1;
 
+int v = (x | y);
 
+int z = (x & y);
+
+Console.WriteLine(z);
+*/
 //=====================================5 задача=============================================
 //Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 
@@ -706,7 +741,6 @@ void Method(int a)
 }
 Method(i);*/
 //===================================2 задача ===================================
-
 // Найти кубы чисел от 1 до N
 /*
 int i = 5;
@@ -831,7 +865,7 @@ Console.Write(Qantity(a));
 //==================================7 задача ======================================
 // Написать программу вычисления произведения чисел от 1 до N
 /*
-int a = 6;
+int a = 5;
 int product(int a)
 {
     int plus = 0;
@@ -850,8 +884,8 @@ void Print (int b)
 }
 
 Print(product(a));
-*/
 
+*/
 //==================================8 задача ======================================
 // Показать кубы чисел, заканчивающихся на четную цифру
 /*
@@ -871,42 +905,443 @@ void Cube(int a)
 Cube(a);
 */
 //**************************************Почувствуй себя сеньором*************************************
+
+//=======================================1 задача ==========================================
+//Задать массив из 8 элементов и вывести их на экран
 /*
-Задать массив из 8 элементов и вывести их на экран
-Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран
-Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
-Написать программу замену элементов массива на противоположные
-Определить, присутствует ли в заданном массиве, некоторое число
-Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
-В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
-Найти сумму чисел одномерного массива стоящих на нечетной позиции
-Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
-В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+int[] newArray(int numbers)
+{
+    int[] array = new int[numbers];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next();
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int[] old = newArray(8);
+PrintArray(old);
+
 */
+//=======================================2 задача ==========================================
+// Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран
+/*
+int [] nowArray(int elements)
+{
+    int[] array = new int[elements];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0,2);
+    }
+    return array;
+}
+
+void PrintNow(int [] method)
+{
+    for(int i =0;i<method.Length; i++)
+    {
+        Console.Write($" {method[i]}");
+    }
+}
+int [] method2 = nowArray(8);
+PrintNow(method2);
+*/
+
+//=====================================3 Задача =======================================
+
+//Задать массив из 12 элементов, заполненных числами из [0,9]. 
+//Найти сумму положительных/отрицательных элементов массива
+/*
+
+int[] oldArray(int massiv)
+{
+    int[] array = new int[massiv];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(-9, 9);
+    }
+    return array;
+}
+
+void PrintOldArray(int[] print)
+{
+    for (int i = 0; i < print.Length; i++)
+    {
+        Console.Write($" {print[i]}");
+    }
+}
+
+
+int FindPositive(int[] array)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 0) result += array[i];
+    }
+    return result;
+}
+
+int FindNegative(int[] array)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < 0) result += array[i];
+    }
+    return result;
+}
+
+void PrintPosiNega(int numbers)
+{
+    Console.Write(numbers);
+}
+int[] nowArray = oldArray(12);
+PrintOldArray(nowArray);
+Console.WriteLine();
+PrintPosiNega(FindPositive(nowArray));
+Console.WriteLine();
+PrintPosiNega(FindNegative(nowArray));
+*/
+//=========================================4 Задача=====================================================
+
+//Написать программу замену элементов массива на противоположные
+/*
+int[] thisProgArray(int elements)
+{
+    int[] array = new int[elements];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 9);
+    }
+    return array;
+}
+
+void PrintArray(int[] method)
+{
+    for (int i = 0; i < method.Length; i++)
+    {
+
+        Console.Write($" {method[i]}");
+    }
+}
+void method(int[] array)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        result = array[i] * (-1);
+        Console.Write(result);
+    }
+}
+int[] someArray = thisProgArray(9);
+PrintArray(someArray);
+Console.WriteLine();
+method(someArray);
+*/
+// а можно ли это сделать без печати (void)?
+
+//=========================================5 Задача=====================================================
+
+//Определить, присутствует ли в заданном массиве, некоторое число
+/*
+int[] newArray(int elem)
+{
+    int[] array = new int[elem];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 9);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int FindElem(int[] array, int find)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] == find) result += array[i];
+        break;
+    }
+    return result;
+}
+
+void FindElemM(int[] array, int find)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] == find) result += array[i];
+        Console.Write($"{find} есть");
+        break;
+    }
+}
+int[] num = newArray(8);
+PrintArray(num);
+Console.WriteLine();
+Console.Write(FindElem(num,3));
+Console.WriteLine();
+FindElemM(num,3);
+
+*/
+//=========================================6 Задача=====================================================
+
+// Задать массив, заполнить случайными положительными трёхзначными числами.
+// Показать количество нечетных\четных чисел
+/*
+int[] Method3(int num)
+{
+    int[] array = new int[num];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(100, 1000);
+    }
+    return array;
+}
+
+void Print(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int even(int[] array)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0) result += 1;
+    }
+    return result;
+}
+int noEven(int[] array)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 != 0) result += 1;
+    }
+    return result;
+}
+
+void PrintEveNo(int print)
+{
+    Console.Write(print);
+}
+int[] mas = Method3(6);
+
+Print(mas);
+Console.WriteLine();
+PrintEveNo(even(mas));
+Console.WriteLine();
+PrintEveNo(noEven(mas));
+*/
+//=========================================7 Задача=====================================================
+//В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
+/*
+int[] metArray(int elem)
+{
+    int[] array = new int[elem];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 123);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int findSomeNum(int[] array)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 10 && array[i] < 99) result += 1;
+    }
+    return result;
+}
+
+int[] array = metArray(123);
+PrintArray(array);
+Console.WriteLine();
+Console.Write(findSomeNum(array));
+*/
+
+//=========================================8 Задача=====================================================
+// Найти сумму чисел одномерного массива стоящих на нечетной позиции
+/*
+
+int[] ArraNew(int numbers)
+{
+    int[] array = new int[numbers];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 10);
+    }
+    return array;
+}
+
+void Print(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int FindNoEvenPositio(int[] array)
+{
+    int res = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 != 0) res += array[i];
+    }
+    return res;
+}
+void printAr(int a)
+{
+    Console.Write(a);
+}
+
+int[] neArray = ArraNew(6);
+
+Print(neArray);
+Console.WriteLine();
+printAr(FindNoEvenPositio(neArray));
+
+*/
+//=========================================9 Задача=====================================================
+//Найти произведение пар чисел в одномерном массиве. 
+//Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+/*
+int[] NewArray(int number)
+{
+    int[] array = new int[number];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 9);
+    }
+    return array;
+}
+
+void Print(int[] newArray)
+{
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        Console.Write($" {newArray[i]}");
+    }
+}
+
+int FindIndexX(int[] array, int index)
+{
+    int first = array[index - 1]; // -1 вводится чтобы начало индекса (0) сравнять с началом массива в конце(1)
+    int last = array[^index]; // если брать конец массива, то индекс начинается с 1, а не с 0.
+    int find = first * last;
+    return find;
+}
+
+int [] array = NewArray(4);
+Print(array);
+Console.WriteLine();
+
+Console.WriteLine(FindIndexX(array, 1));
+*/
+//=========================================10 Задача=====================================================
+
+//В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+/*
+double[] NewArray(int elements)
+{
+    double[] array = new double[elements];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().NextDouble();
+    }
+    return array;
+}
+
+void PrintArray(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+double FindDiffMaxMinIn(double[] array)
+{
+    double Min = array[0];
+    double Max = array[0];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > Max) Max = array[i];
+        if (array[i] < Min) Min = array[i];
+    }
+    return Max - Min;
+
+}
+
+void PrintFindDiffMaxMinIn(double number)
+{
+    Console.Write(number);
+}
+double[] array = NewArray(6);
+PrintArray(array);
+Console.WriteLine();
+PrintFindDiffMaxMinIn(FindDiffMaxMinIn(array));
+*/
+
 
 //****************************************Почувствуй себя лидом******************************************
 //=========================================Задача 1=====================================================
 //Выяснить являются ли три числа сторонами треугольника
+//теорема неравенства треугольника, которая гласит, что сумма 2 сторон треугольника должна быть больше третьей стороны.
 /*
 int a = 5;
 int b = 5;
-int c = 345;
+int c = 5;
 
 void Method(int a, int b, int c)
 {
-    if (a + c > b || a + b > c || c + b > a) Console.Write("Треугольник");
+    if (a + c > b && a + b > c && c + b > a) Console.Write("Треугольник");
     else Console.Write("не треугольник");
 
 }
 
-Method(a,b,c);*/
+Method(a, b, c);
+*/
 //=========================================Задача 2 =====================================================
 // Определить сколько чисел больше 0 введено с клавиатуры
 /*
 1. ввод числа с клавиатуры.
 2. разбить каждое число на отдельное число, делением?
 3. каждое отдельное число сравнивать с 0, если больше то +1;
-
+*/
+/*
 Console.WriteLine("введите число");
 int v = Convert.ToInt32(Console.ReadLine()); // если будет Console.Read данные будут не правильные
 
@@ -934,25 +1369,97 @@ Print(Qantity(v));
 */
 //=========================================Задача 3 =====================================================
 //Написать программу преобразования десятичного числа в двоичное
-
-
-int a = 29;
-void Method(int a)
+/*
+int z = 28;
+int Method(int a)
 {
     int d = 2;
     int b = 0;
     int c = 0;
-    string f = String.Empty;
+    string f = String.Empty; // пустая строка чтобы запомнить данные
     while (a > 0)
     {
-        b = a / d;
-        c = a - (b * d);
-        f = f + c;
-        a = b;
+        b = a / d; // делима на 2 получаем, чётное число
+        c = a - (b * d); // четное число отнимае от данного числа, получаем 0 или 1
+        f = f + c; // записываем 0 или 1 в f
+        a = b; // далее число разделеное на два выводим во второй цикл
     }
-    Console.WriteLine(new string(f.ToCharArray().Reverse().ToArray()));
+    return Convert.ToInt32(f);// вернуть в инт//new string(f.ToCharArray().Reverse().ToArray()));
 }
-Method(a);
+
+Console.Write(Method(z));
+Console.WriteLine();
+Console.Write(QuantityNumbers(Method(z)));
+Console.WriteLine();
+*/
+/*
+int [] num10 = new int [0];
+int a = 0;
+int i = 0;
+int Method(int [] numb10)
+{
+    int num10 = 28;
+    int[] array = new int[10];
+
+    while (num10 >= 1)
+    {
+        a = num10 % 2;
+        array[i] = a;
+        i++;
+
+        num10 = num10 / 2;
+
+    }
+    return array[i];
+    
+}
+Console.Write(Method(num10));
+// Console.ReadKey();
+
+/*
+int[] array = new int[] { }; // пустой массив
+
+int[] nums; // пустой массив
+int len = 4; // длина массива
+nums = new int[len]; //объявление длины массива
+for (int i = 0; i < len; i++) // цикл пробегающий по длине массива len
+{
+    nums[i] = 3; //число добавляемое в массив
+}
+PrintArray(nums);
+*/
+// 1. В метод должны поступать цифры.
+// 2. Должен быть пустой массив.
+// 3. В массив должны попадать цифры, через while.
+// 4. Вывод данный из массива.
+/*
+int QuantityNumbers(int a) // посчитали кол-во элементов в цифре
+{
+    int i = 0;
+    int b = 0;
+    while (a > 0)
+    {
+        b = a % 10;
+        a = (a - b) / 10;
+        i++;
+    }
+    return i;
+}
+
+//Console.Write(QuantityNumbers(a));
+
+
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+//PrintArray(array);
+
+*/
 
 //Копирует знаки данного экземпляра в массив знаков Юникода.
 //Изменяет порядок элементов во всем одномерном массиве Array на обратный.
@@ -960,11 +1467,9 @@ Method(a);
 
 //Решил цикл сам сделал, развернуть строку с помощью интернета.
 
-
-
-//=========================================Задача 3 =====================================================
+//=========================================Задача 4 =====================================================
 //Найти точку пересечения двух прямых заданных уравнением y = k1 * x + b1, y = k2 * x + b2, b1 k1 и b2 и k2 заданы
-
+/*
 int b1 = 4;
 int k1 = 5;
 int b2 = 3;
@@ -975,15 +1480,89 @@ int Method(int b1, int k1, int b2, int k2)
 {
     int x = (b2 - b1) / (k1 - k2);
     int y = k1 * ((b2 - b1 / k1 - k2)) + b1;
-    return  x;
+    return x;
 }
 
 Method(b1, k1, b2, k2);
 
+*/
 
+
+//=========================================Задача 5 =====================================================
+// Показать числа Фибоначчи
+/*
+int a = 90;
+void numFib(int a)
+{
+    int arg1 = 1;
+    int arg2 = 1;
+    while (a > arg1)
+    {
+        Console.Write($" {arg1},{arg2}");
+        arg1 = arg2 + arg1;
+        arg2 = arg1 + arg2;
+    }
+}
+numFib(a);
+
+*/
+
+//=========================================Задача 6 =====================================================
+
+/*
+Написать программу масштабирования фигуры Тут для тех кто далеко улетел, чтобы задавались вершины фигуры списком 
+(одной строкой) например: "(0,0) (2,0) (2,2) (0,2)" коэффициент масштабирования k задавался отдельно - 2 или 4 
+или 0.5 В результате показать координаты, которые получатся. при k = 2 получаем "(0,0) (4,0) (4,4) (0,4)"*/
+
+//=========================================Задача 7 =====================================================
+//Написать программу копирования массива
+/*
+int[] Array(int elements)
+{
+    int[] array = new int[elements];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 9);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($" {array[i]}");
+    }
+}
+
+int[] array = Array(7);
+
+
+int PrintArraya(int[] array)
+{
+    int[] newArray = new int[array.Length];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = newArray[i];
+    }
+    return newArray[5];
+}
+
+PrintArray(array);
+Console.WriteLine();
+Console.Write(PrintArraya(array));
+*/
 //Подсчитать сумму цифр в числе
 
 //Определить количество цифр в числе
 
 //Определить сколько чисел больше 0 введено с клавиатуры
 
+/*
+
+
+
+Повтор:
+Определить, присутствует ли в заданном массиве, некоторое число
+Найти произведение пар чисел в одномерном массиве. 
+Парой считаем первый и последний элемент, второй и предпоследний и т.д.
