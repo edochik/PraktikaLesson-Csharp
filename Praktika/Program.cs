@@ -1,4 +1,4 @@
-
+﻿
 //****************************Почувствуй себя интерном******************************
 /*================================== 1 Задача ===============================================
 1.Задайте массив заполненный случайными положительными трёхзначными числами.
@@ -61,7 +61,7 @@ PrintResult(FindNoEven(mem));
 ===================================== 2 Задача =======================================================
 Задайте одномерный массив, заполненный случайными числами. 
 Найдите сумму элементов, стоящих на нечётных позициях.
-1. Создать одномерный массив, заполненые случайными числами.
+1. Создать одномерный массив, заполненные случайными числами.
 2. Напечатать одномерный массив.
 3. Найти сумму элементов, стоящик на нечётных позициях.
 */
@@ -80,7 +80,7 @@ void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]}");
+        Console.Write($" {array[i]}");
     }
 }
 void PrintInformatino(int a)
@@ -91,9 +91,9 @@ void PrintInformatino(int a)
 int FindEvenPosition(int[] array)
 {
     int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i = i + 2)
     {
-        if (array[i] % 2 == 0) result += array[i];
+        result += array[i];
     }
     return result;
 }
@@ -101,9 +101,9 @@ int FindEvenPosition(int[] array)
 int FindNoEvenPosition(int[] array)
 {
     int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i = i + 2)
     {
-        if (array[i] % 2 != 0) result += array[i];
+        result += array[i];
     }
     return result;
 }
@@ -1611,6 +1611,211 @@ Console.Write(PrintArraya(array));
 
 
 */
+
+//===========================================Двумерные массивы======================================================
+//===============================================Задача 1 ========================================================
+//Показать двумерный массив размером m×n заполненный целыми числами
+/*
+int[,] array = new int[3, 3];
+int[,] newMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(0, 9);
+        }
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($" {matrix[i, j]}");
+        }
+        Console.WriteLine();
+    }
+
+}
+
+
+
+newMatrix(array);
+PrintMatrix(array);
+*/
+//===============================================Задача 2 ========================================================
+// Показать двумерный массив размером m×n заполненный вещественными числами
+/*
+double [,] MatrixThisMethod(double[,] method)
+{
+    for (double i = 0; i < method.GetLength(0); i++)
+    {
+        for (double j = 0; j < method.GetLength(1); j++)
+        {
+            method[(int)i,(int) j] = new Random().NextDouble()*0.1;
+        }
+    }
+    return method;
+}
+
+void PrinThisMatrix(double[,] matrix)
+{
+    for (double i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (double j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($" {matrix[(int)i,(int) j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+double [,] matrix = new double [3,3];
+MatrixThisMethod(matrix);
+PrinThisMatrix(matrix);
+*/
+//===============================================Задача 3 ========================================================
+// В двумерном массиве n×k заменить четные элементы на противоположные
+/*
+int[,] array = new int[4, 4];
+
+void MatrixNow(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(-9, 9);
+        }
+    }
+}
+
+void PrintMatrixNow(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($" {array[i, j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] FindEvenElement(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] % 2 == 0) array[i, j] = -array[i, j];
+        }
+    }
+    return array;
+}
+
+MatrixNow(array);
+PrintMatrixNow(array);
+
+FindEvenElement(array);
+Console.WriteLine();
+PrintMatrixNow(array);
+*/
+//===============================================Задача 4 ========================================================
+// Задать двумерный массив следующим правилом: Aₘₙ = m+n
+/*
+int[,] MatrixMN(int n, int m)
+{
+    int[,] array = new int[n, m];
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = i + j;
+        }
+    }
+    return array;
+}
+
+void PrintMatrixMN(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($" {matrix[i, j]}");
+        }
+        Console.WriteLine();
+    }
+}
+PrintMatrixMN(MatrixMN(5, 5));
+*/
+//===============================================Задача 5 ========================================================
+//В двумерном массиве заменить элементы, у которых оба индекса чётные на их квадраты
+/*
+int[,] array = new int[5, 5];
+
+void thisMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(1, 9);
+        }
+    }
+}
+
+void PrintThisMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($" {matrix[i, j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] ChengeSqur(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 1; j < matrix.GetLength(1); j = j + 2)
+        {
+            matrix[i, j] = matrix[i, j] * matrix[i, j];
+        }
+    }
+    return matrix;
+}
+
+thisMatrix(array);
+PrintThisMatrix(array);
+Console.WriteLine();
+ChengeSqur(array);
+PrintThisMatrix(array);
+*/
+
+//===============================================Задача 5 ========================================================
+//В двумерном массиве показать позиции числа, заданного пользователем или указать, что такого элемента нет
+
+
+
+/*
+В матрице чисел найти сумму элементов главной диагонали
+Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
+Написать программу, которая обменивает элементы первой строки и последней строки
+Написать программу, упорядочивания по убыванию элементы каждой строки двумерной массива.
+Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить, что это невозможно (в случае, если матрица не квадратная).
+В прямоугольной матрице найти строку с наименьшей суммой элементов.
+Составить частотный словарь элементов двумерного массива
+*/
+
 
 //Подсчитать сумму цифр в числе
 
