@@ -1,4 +1,4 @@
-
+﻿
 //****************************Почувствуй себя интерном******************************
 /*================================== 1 Задача ===============================================
 1.Задайте массив заполненный случайными положительными трёхзначными числами.
@@ -1628,3 +1628,33 @@ Console.Write(PrintArraya(array));
 или 0.5 В результате показать координаты, которые получатся = . при k2 получаем "(0,0) (4,0) (4,4) (0,4)"
 */
 
+
+void ArrayNew(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i, j] = new Random().Next(0, 9);
+        }
+
+    }
+
+}
+
+void PrintArrayNow(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i,j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] newArray = new int[3, 4];
+
+ArrayNew(newArray);
+PrintArrayNow(newArray);
