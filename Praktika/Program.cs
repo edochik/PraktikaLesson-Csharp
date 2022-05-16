@@ -1832,6 +1832,39 @@ PrintThisMatrix(array);
 (одной строкой) например: "(0,0) (2,0) (2,2) (0,2)" коэффициент масштабирования k задавался отдельно - 2 или 4 
 или 0.5 В результате показать координаты, которые получатся = . при k2 получаем "(0,0) (4,0) (4,4) (0,4)"
 */
+<<<<<<< HEAD
+
+
+void ArrayNew(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i, j] = new Random().Next(0, 9);
+        }
+
+    }
+
+}
+
+void PrintArrayNow(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i,j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] newArray = new int[3, 4];
+
+ArrayNew(newArray);
+PrintArrayNow(newArray);
+=======
 /*
 int[,] pic = new int[,]
 {
@@ -1860,3 +1893,4 @@ int[,] pic = new int[,]
  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 };
 */
+>>>>>>> 3eed1c622cc6ac7594aec2c81233a9ac4d37d7ce
