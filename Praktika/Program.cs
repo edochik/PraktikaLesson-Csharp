@@ -1936,3 +1936,22 @@ PrintFindPosition(FindPostionI(matrix, find), FindPostionJ(matrix, find));
 */
 
 //вернуть два значения
+using System.Linq;
+
+string text = "(1,2) (2,3) (4,5) (6,7)"
+                .Replace("(", "") //убрать скобки возле цифр
+                .Replace(")", "") //убрать скобки возле цифр
+                ;
+Console.WriteLine(text);
+var data = text.Split(" ")//возьми текст разбей, разделителем будет пробел
+               .Select(item => item.Split(',')) //выбрать элементы, и превратить в новые элемента с запятой
+               .Select(e => (x: int.Parse(e[0]), y: int.Parse(e[1]))) 
+               .Where(e => e.x % 2 == 0) //дать такие пары для которых первые пары чётные
+               .Select(point => (point.x * 10, point.y))
+               .ToArray();//массив
+
+for (int i = 0; i < data.Length; i++)
+{
+    Console.WriteLine(data[i]);
+    Console.WriteLine();
+}
