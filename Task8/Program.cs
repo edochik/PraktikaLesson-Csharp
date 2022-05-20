@@ -22,9 +22,9 @@ void PrintArr(int[] arr)
 int FindSumNoEven(int[] array)
 {
     int res = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i += 2)
     {
-        if (array[i] % 2 != 0) res += array[i];
+        res += array[i];
     }
     return res;
 }
@@ -36,11 +36,11 @@ void Print(int a)
 int FindSumEven(int[] array)
 {
     int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i += 2)
     {
-        if(array[i] % 2 == 0) result += array[i];
+        result += array[i];
     }
-    return result; 
+    return result;
 }
 int[] newArr = array(8);
 PrintArr(newArr);

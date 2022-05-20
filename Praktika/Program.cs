@@ -1847,7 +1847,7 @@ int FindPostionJ(int[,] matrix, int find)//поиск индекса в стол
 }
 
 
-/*(int, int) FindPostionIJ(int[,] matrix, int find)//как вернуть два значения?:((((
+/*FindPostionIJ(int[,] matrix, int find)//как вернуть два значения?:((((
 {
     int lengthI = matrix.GetLength(0);
     int indexI = 0;
@@ -1936,6 +1936,7 @@ PrintFindPosition(FindPostionI(matrix, find), FindPostionJ(matrix, find));
 */
 
 //вернуть два значения
+/*
 using System.Linq;
 
 string text = "(1,2) (2,3) (4,5) (6,7)"
@@ -1945,7 +1946,7 @@ string text = "(1,2) (2,3) (4,5) (6,7)"
 Console.WriteLine(text);
 var data = text.Split(" ")//возьми текст разбей, разделителем будет пробел
                .Select(item => item.Split(',')) //выбрать элементы, и превратить в новые элемента с запятой
-               .Select(e => (x: int.Parse(e[0]), y: int.Parse(e[1]))) 
+               .Select(e => (x: int.Parse(e[0]), y: int.Parse(e[1])))
                .Where(e => e.x % 2 == 0) //дать такие пары для которых первые пары чётные
                .Select(point => (point.x * 10, point.y))
                .ToArray();//массив
@@ -1955,3 +1956,90 @@ for (int i = 0; i < data.Length; i++)
     Console.WriteLine(data[i]);
     Console.WriteLine();
 }
+*/
+
+/*
+Задачи семинара
+- Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
+*/
+int[,] RandomArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(0, 9);
+        }
+    }
+    return array;
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($" {array[i, j]}");
+        }
+        Console.WriteLine();
+    }
+
+}
+
+void ReplaceRow(int[,] array, int row1, int row2)//замена перовой строчки на последнюю
+{
+    int buffer = 0;
+
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+        buffer = array[row1, i];
+        array[row1, i] = array[row2, i];
+        array[row2, i] = buffer;
+    }
+
+}
+
+void ReplaceColumn(int[,] array, int column1, int column2)//замена первого столбца на последний
+{
+    int buffer = 0;
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+        buffer = array[i, column1];
+        array[i, column1] = array[i, column2];
+        array[i, column2] = buffer;
+    }
+}
+
+
+int[,] array = new int[6, 6];
+int str = array.GetLength(0);
+RandomArray(array);
+PrintArray(array);
+
+ReplaceColumn(array, 0, str - 1);
+Console.WriteLine();
+PrintArray(array);
+
+
+
+/*
+Задачи семинара
+ Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
+В случае, если это невозможно, программа должна вывести сообщение для пользователя.
+*/
+/*
+- Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том,
+ сколько раз встречается элемент входных данных.
+- Задайте двумерный массив из целых чисел. Напишите программу, которая удалит строку и столбец, 
+на пересечении которых расположен наименьший элемент массива.
+- Вывести первые N строк треугольника Паскаля. Сделать вывод в виде равнобедренного треугольника
+Задача 1: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы 
+каждой строки двумерного массива.
+Задача 2: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить 
+строку с наименьшей суммой элементов.
+Задача 3: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+Задача 4: Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
+которая будет построчно выводить массив, добавляя индексы каждого элемента.
+Задача 5: Заполните спирально массив 4 на 4
+*/
