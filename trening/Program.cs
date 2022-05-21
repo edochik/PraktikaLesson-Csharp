@@ -1,54 +1,4 @@
 ﻿
-/*
-1. Задача. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу,
- которая покажет количество чётных чисел в массиве.
-
-
-
-void PrintNew(int[] array)
-{
-    int lenght = array.Length;
-    for (int i = 0; i < lenght; i++)
-    {
-        Console.Write($" {array[i]}");
-    }
-}
-
-int[] createArray(int elements)
-{
-    //int num = new Random().Next(10,50);
-    int[] arr = new int[elements];
-    int i = 0;
-    while (i < arr.Length)
-    {
-        arr[i] = new Random().Next(1000, 10000);
-        i++;
-    }
-    return arr;
-}
-
-int EvenNum(int[] array)
-{
-    int length = array.Length;
-    int result = 0;
-    for (int i = 0; i < length; i++)
-    {
-        if (array[i] % 2 == 0) result += 1;
-    }
-    return result;
-}
-
-int [] test = createArray(10);
-
-
-PrintNew(test);
-Console.WriteLine();
-
-Console.WriteLine(EvenNum(test));
-
-
-*/
-
 
 /*
 1. Спирально заполнить двумерный массив:
@@ -157,12 +107,12 @@ namespace ConsoleApplication1
 }
 */
 /*
+
 2. В двумерном массиве целых чисел. 
 Удалить строку и столбец, на пересечении которых расположен наименьший элемент.
 */
 
-/*
-int[,] NewMatrix(int[,] matrix)
+int[,] NewMatrix(int[,] matrix)//создать массив
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -174,7 +124,7 @@ int[,] NewMatrix(int[,] matrix)
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix)
+void PrintMatrix(int[,] matrix)// печать массива
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -186,101 +136,106 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int FindSmallElement(int[,] array)
+(int, int) FindSmallIndex(int[,] array)//находит наименьший элемент в массиве
 {
-    // int min = array[0, 0];
-    int result = 0;
+    int min = array[0, 0];
+    int row = 0;
+    int column = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i, j] > array[0, 0]) result = array[i, j];
-        }
-    }
-    return result;
-}
-int FindPostionJ(int[,] matrix)//поиск индекса в столбце
-{
-    int length = matrix.GetLength(1);
-    int index = 0;
-    int position = -1;
-    while (index < length)
-    {
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            for (int j = 0; j < matrix.GetLength(1); j++)
+            if (min > array[i, j])
             {
-                if (matrix[i, j] > matrix[0, 0])
-                {
-                    position = matrix[i, j];
-                    break;
-                }
+                min = array[i, j];
+                row = i;
+                column = j;
             }
         }
-        index++;
     }
-    return position;
+    return (row, column);
 }
 
-int[,] matrix = new int[5, 5];
-NewMatrix(matrix);
-PrintMatrix(matrix);
-Console.WriteLine();
-Console.Write(FindSmallElement(matrix));
-Console.WriteLine();
-Console.WriteLine(FindPostionJ(matrix));
-
-
-
-int[] array = { 1, 2, 33, 4, 15, 6, 71, 8, 9 };
-
-int index = 0;
-int length = array.Length;
-int result = 0;
-while (index < length)
+void Remove(int[,] array, int row, int column) // должен удалять строчку и столбец
 {
-    for (int i = 0; i < array.Length; i++)
+    int[,] newArray = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
+    for (int i = 0; i < row; i++)
     {
-        if (array[i] < array[0]) result = array[i];
+        for (int j = 0; j < column; j++)
+        {
+            newArray[i, j] = array[i, j];
+        }
     }
-    index++;
+    for (int i = row + 1; i < array.GetLength(0); i++)
+    {
+        for (int j = column + 1; j < array.GetLength(1); j++)
+        {
+            newArray[i - 1, j - 1] = array[i, j];
+
+        }
+    }
+    array = newArray;
 }
-Console.WriteLine(result);
-*/
+
+int[,] array = new int[3, 3];
+NewMatrix(array);
+PrintMatrix(array);
+Console.WriteLine(FindSmallIndex(array));
+Console.WriteLine();
+Remove(array, 2, 2);
+PrintMatrix(array);
+
+//Console.Write(FindSmallIndex(array));
+
 /*
 3. Сформировать трехмерный массив не повторяющимися двузначными числами показать его построчно на экран выводя индексы 
 соответствующего элемента
 */
-/*
-int[,] NewMatrix(int[,] matrix)
+
+int[,,] NewMatrix(int[,,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(0, 9);
+            for (int z = 0; z < matrix.GetLength(2); z++)
+            {
+                matrix[i, j, z] = new Random().Next(0, 9);
+            }
+
         }
     }
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix)
+void PrintMatrix(int[,,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($" {matrix[i, j]}");
+            for (int z = 0; z < matrix.GetLength(2); z++)
+            {
+                Console.Write($" {matrix[i, j, z]}");
+            }
+            Console.WriteLine();
         }
         Console.WriteLine();
     }
 }
 
-int [,] matrix = new int [5,5];
+int[,,] matrix = new int[5, 5, 5];
 NewMatrix(matrix);
 PrintMatrix(matrix);
 
-*/
+
+
+
+//https://www.youtube.com/watch?v=NLu9y4LKXQ0
+
+
+/*
+//задача из интернета распечатать определенный узор в двухмерном массиве
 int[,] CreateMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -288,7 +243,7 @@ int[,] CreateMatrix(int[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (i == j) matrix[i, j] = 1;
-            else if (j == (matrix.GetLength(1) - 1) - j) matrix[i, j] = 1;
+            else if (i == (matrix.GetLength(1) - 1) - j) matrix[i, j] = 1;
             else matrix[i, j] = 0;
         }
     }
@@ -312,4 +267,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-PrintMatrix(Matrix(matrix));
+PrintMatrix(CreateMatrix(matrix));
+*/
+
+

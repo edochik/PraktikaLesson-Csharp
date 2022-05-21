@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Praktika/bin/Debug/net6.0/Praktika.dll",
+            "program": "${workspaceFolder}/trening/bin/Debug/net6.0/trening.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Praktika",
+            "cwd": "${workspaceFolder}/trening",
             "console": "internalConsole",
             "stopAtEntry": false
         },

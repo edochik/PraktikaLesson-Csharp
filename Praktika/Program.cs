@@ -1570,8 +1570,59 @@ int PrintArraya(int[] array)
 PrintArray(array);
 Console.WriteLine();
 Console.Write(PrintArraya(array));
+*/
 
+//=========================================Задача 7 ==========================================
+// Создать массив, найти наименьший элемент и удалить индекс данного элемента
+/*
+int[] CreateArray(int numbers)//создать одномерный массив
+{
+    int[] array = new int[numbers];
+    for (int i = 0; i < array.Length; i++)
+        array[i] = new Random().Next(0, 100);
+    return array;
+}
 
+void PrintArray(int[] array)//печать одномерного массива
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write($" {array[i]}");
+}
+
+void RemoveAt(ref int[] array, int index)// вывод нового массива без одного индекса (удаление одного индекса)
+{
+    int[] newArray = new int[array.Length - 1]; // кол-во элементов массива хранится array.Length и получаем кол-во элементов на один меньше + создаем новый массив
+    for (int i = 0; i < index; i++) //перебирает старый массив до тех пока не найдет элемент массива
+    {
+        newArray[i] = array[i];// новому массиву присваиваем элементы нового массива
+    }
+    for (int i = index + 1; i < array.Length; i++)// необходимо дописать в массив все индексы находящиеся после удаленного индекса ( +1 перешагнуть текущий индекс)
+    {    
+        newArray[i - 1] = array[i]; // -1 индекс необходимо сдвинуть, так как элементов индексов стало меньше
+    }
+    array = newArray;//старому массиву присваиваем новый массив
+}
+
+int RemoveSmallElement(int[] array) //нахождение минимального элемента
+{
+    int min = array[0];
+    int index = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (min > array[i]) 
+        {min = array[i];
+        index = i;
+        }
+    }
+    return index;
+}
+
+int[] array = CreateArray(6);
+PrintArray(array);
+Console.WriteLine();
+//Console.Write(RemoveSmallElement(array));
+RemoveAt(ref array, RemoveSmallElement(array));
+PrintArray(array);
 */
 //*************************************Двумерные массивы**************************************
 /*=========================================Задача 1 ==========================================

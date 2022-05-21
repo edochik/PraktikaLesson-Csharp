@@ -1,52 +1,39 @@
 ﻿/* Задать массив, заполнить случайными положительными трёхзначными числами.
 Показать количество нечетных\четных чисел */
 
-int[] array(int collection)
+int[] CreateArray(int[] array)
 {
-    int[] array = new int[collection];
     for (int i = 0; i < array.Length; i++)
-    {
         array[i] = new Random().Next(100, 1000);
-    }
     return array;
 }
 
 void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
-    {
         Console.Write($" {array[i]}");
-    }
 }
 
-int FindEven(int[] array)
-{
-    int res = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] % 2 == 0)
-        {
-            res += 1;
-        }
-    }
-    return res;
-}
-int FindNoEven(int[] array)
+int FindQuantityEvenNumbers(int[] array)
 {
     int result = 0;
     for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] % 2 != 0) result += 1;
-    }
-    return result; 
+        if (array[i] % 2 == 0) result += 1;
+    return result;
 }
-void Print(int a)
+
+int FindQuantityNotEvenNumbers(int[] array)
 {
-    Console.Write(a);
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+        if (array[i] % 2 != 0) result += 1;
+    return result;
 }
-int[] newarray = array(4);
-PrintArray(newarray);
+int[] array = new int[5];
+CreateArray(array);
+PrintArray(array);
 Console.WriteLine();
-Print(FindEven(newarray));
+Console.Write(FindQuantityEvenNumbers(array));
 Console.WriteLine();
-Print(FindNoEven(newarray));
+Console.Write(FindQuantityNotEvenNumbers(array));
+

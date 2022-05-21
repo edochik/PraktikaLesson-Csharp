@@ -21,10 +21,9 @@ void PrintArray(int[] newPrint)
 int findElemArr(int[] array, int find)
 {
     
-    int count = array.Length;
     int index = 0;
     int result = 0;
-    while (index < count)
+    while (index < array.Length)
     {
         if (array[index] == find)
         {
