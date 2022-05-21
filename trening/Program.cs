@@ -59,9 +59,8 @@ Console.WriteLine(EvenNum(test));
 */
 //1. Как печатать массив по порядку? (нашел)
 //2. Как сделать так, чтобы доходили до конца и шли в низ?
-
-
 /*
+
 int[,] CreateMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -86,10 +85,21 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+int TurnMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (matrix[i, j]
+        }
+    }
+}
 int[,] NewMatrix = new int[4, 4];
 CreateMatrix(NewMatrix);
 PrintMatrix(NewMatrix);
 */
+
 /*
 namespace ConsoleApplication1
 {
@@ -220,7 +230,7 @@ Console.Write(FindSmallElement(matrix));
 Console.WriteLine();
 Console.WriteLine(FindPostionJ(matrix));
 
-*/
+
 
 int[] array = { 1, 2, 33, 4, 15, 6, 71, 8, 9 };
 
@@ -236,7 +246,7 @@ while (index < length)
     index++;
 }
 Console.WriteLine(result);
-
+*/
 /*
 3. Сформировать трехмерный массив не повторяющимися двузначными числами показать его построчно на экран выводя индексы 
 соответствующего элемента
@@ -271,3 +281,35 @@ NewMatrix(matrix);
 PrintMatrix(matrix);
 
 */
+int[,] CreateMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (i == j) matrix[i, j] = 1;
+            else if (j == (matrix.GetLength(1) - 1) - j) matrix[i, j] = 1;
+            else matrix[i, j] = 0;
+        }
+    }
+    return matrix;
+}
+
+
+
+int[,] matrix = new int[7, 7];
+
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($" {matrix[i, j]}");
+        }
+        Console.WriteLine();
+    }
+}
+
+PrintMatrix(Matrix(matrix));
